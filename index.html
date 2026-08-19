@@ -4,104 +4,203 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Kyriakos Chalvatzis — backend engineer specializing in cloud-native platforms and distributed systems. Projects, experience, and contact.">
 	<link href="styles.css" rel="stylesheet">
 	<link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
-
-	<title>kyriakos-chalvatzis portfolio</title>
-
-	<script type="text/javascript" src="https://livejs.com/live.js"></script>
-</head>	
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230b0d0a'/%3E%3Ctext x='50' y='70' font-family='monospace' font-size='58' fill='%23e3a83b' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+	<title>Kyriakos Chalvatzis — Backend Engineer</title>
+</head>
 <body>
-	<!-- all the content-->
-	<main>
-		<div>
-	    		<!-- Information -->
-			<div id="information-container" class="container">
-				<div class="info-item">
-					<div>
-						<i class="fa-solid fa-location-dot"></i>
-						Based-In:
+	<header class="termbar">
+		<span class="termbar-id">kyriakos@web<span class="fg-dim">:~$</span></span>
+		<nav class="flags">
+			<a href="#projects">--projects</a>
+			<a href="#experience">--experience</a>
+			<a href="#skills">--skills</a>
+			<a href="#contact">--contact</a>
+		</nav>
+	</header>
+
+	<main class="terminal">
+
+		<!-- Hero -->
+		<section id="hero" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> <span class="typed">whoami</span></p>
+			<div class="output">
+				<h1>Kyriakos Chalvatzis</h1>
+				<p class="tagline">Backend engineer specializing in cloud-native platforms and distributed systems, built through academic and independent projects.</p>
+				<ul class="flag-list">
+					<li><span class="flag">--location</span> Athens/Chania, Greece</li>
+					<li><span class="flag">--email</span> <a href="mailto:kyriakos.halvatzis@gmail.com">kyriakos.halvatzis@gmail.com</a></li>
+					<li><span class="flag">--github</span> <a href="https://github.com/kyri56xcaesar" target="_blank" rel="noopener">github.com/kyri56xcaesar</a></li>
+					<li><span class="flag">--linkedin</span> <a href="https://linkedin.com/in/kchalvatzis" target="_blank" rel="noopener">linkedin.com/in/kchalvatzis</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section id="projects" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> kubectl get deployments -A</p>
+			<div class="output deployments">
+
+				<details class="proj" open>
+					<summary>
+						<span class="name">kuspace</span>
+						<span class="stack">Go · Gin · Kubernetes · Docker · MinIO · DuckDB · WebSockets</span>
+						<span class="status live">LIVE</span>
+					</summary>
+					<div class="desc">
+						<p><em>Cloud-native Analytical Platform — Diploma Thesis.</em> Designed and built a Kubernetes-native batch platform across 5 services with 100 REST endpoints: a channel-based worker-pool scheduler (configurable concurrency/queue limits), dual Kubernetes-Job/Docker execution backends, live cluster metrics via the Kubernetes metrics API, and JWT/OAuth (Google, GitHub) authentication through a custom-built identity provider; DuckDB available as a first-class analytical job type.</p>
+						<a href="https://github.com/kyri56xcaesar/kuspace" target="_blank" rel="noopener">github.com/kyri56xcaesar/kuspace →</a>
 					</div>
-					<div>
-						Chania,Greece
+				</details>
+
+				<details class="proj" open>
+					<summary>
+						<span class="name">mapreduce-engine</span>
+						<span class="stack">Python · Kubernetes · Docker · etcd · REST</span>
+						<span class="status archived">ARCHIVED</span>
+					</summary>
+					<div class="desc">
+						<p><em>Distributed MapReduce Engine on Kubernetes — 4-person team.</em> Owned the Manager Service (dynamic per-job Kubernetes manifest generation, master/worker orchestration) and the mapper/shuffle/reducer pipeline, with etcd-backed fault tolerance for job state.</p>
+						<a href="https://github.com/kyri56xcaesar/MapReduce-engine-on-Kubernetes" target="_blank" rel="noopener">github.com/kyri56xcaesar/MapReduce-engine-on-Kubernetes →</a>
 					</div>
+				</details>
+
+				<details class="proj" open>
+					<summary>
+						<span class="name">cellular-automata</span>
+						<span class="stack">Python · Django · AWS F1 · FPGA · REST</span>
+						<span class="status noaccess">NO REPO</span>
+					</summary>
+					<div class="desc">
+						<p>Built Django backend APIs and job-execution workflows to run FPGA-accelerated cellular automata simulations on AWS F1 instances.</p>
+					</div>
+				</details>
+
+				<p class="ls-label"># ls ~/projects/archive</p>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">pms-proj</span>
+						<span class="stack">BFF + 3 microservices · Keycloak OIDC/JWT · PostgreSQL · deployed on GCP</span>
+						<span class="status live">LIVE</span>
+					</summary>
+					<div class="desc">
+						<a href="https://github.com/kyri56xcaesar/pms-proj" target="_blank" rel="noopener">github.com/kyri56xcaesar/pms-proj →</a>
+					</div>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">minioth</span>
+						<span class="stack">Go · custom identity provider · JWT · pluggable plaintext/DuckDB store</span>
+						<span class="status live">LIVE</span>
+					</summary>
+					<div class="desc">
+						<p>Custom-built Unix-style identity provider; powers auth for kuspace.</p>
+						<a href="https://github.com/kyri56xcaesar/minioth" target="_blank" rel="noopener">github.com/kyri56xcaesar/minioth →</a>
+					</div>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">ecommerce-microservices</span>
+						<span class="stack">Go · Docker · Keycloak · Kafka · PostgreSQL · deployed on GCP</span>
+						<span class="status noaccess">NO REPO</span>
+					</summary>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">spark-hadoop-analytics</span>
+						<span class="stack">Scala · Apache Spark · Apache Hadoop · TUC compute cluster</span>
+						<span class="status noaccess">COURSEWORK</span>
+					</summary>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">tinyos-multithreaded</span>
+						<span class="stack">C · MLFQ scheduling · pipes · sockets · process sync</span>
+						<span class="status noaccess">COURSEWORK</span>
+					</summary>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">kappa-lang</span>
+						<span class="stack">Flex · Bison · lexing/parsing/codegen → transpiles to C</span>
+						<span class="status noaccess">COURSEWORK</span>
+					</summary>
+				</details>
+
+				<details class="proj compact">
+					<summary>
+						<span class="name">cpu-vhdl</span>
+						<span class="stack">VHDL · single/multi-cycle CPU · ALU · control units · FPGA</span>
+						<span class="status noaccess">COURSEWORK</span>
+					</summary>
+				</details>
+
+			</div>
+		</section>
+
+		<!-- Experience -->
+		<section id="experience" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> cat experience.log</p>
+			<div class="output log">
+				<div class="log-entry">
+					<p class="log-meta"><span class="ts">[2026-04 → present]</span> Independent Developer — Remote</p>
+					<p>Designing and building a full-stack web application independently, end to end: backend services, infrastructure, monitoring, and load testing.</p>
 				</div>
-				<div class="info-item">
-					<div>
-						<i class="fa-brands fa-github"></i>
-						GitHub:
-					</div>
-					<div href="https://github.com/kyri56xcaesar">
-						kyri56xcaesar
-					</div>
-				</div>
-				<div class="info-item">
-					<div>
-						<i class="fa-solid fa-envelope"></i>
-						Email:
-					</div>
-					<div>
-						kyriakos.halvatzis@gmail.com
-					</div>
+				<div class="log-entry">
+					<p class="log-meta"><span class="ts">[2023-04 → 2023-08]</span> Net22 — Chania, Greece — Fullstack Developer Intern</p>
+					<p>Built a Ghostscript-based compression pipeline for PDFs and other media assets, cutting file size by ~80%; used it to retroactively compress an existing backlog of uncompressed files, then integrated it into the WordPress upload flow for automatic compression going forward.</p>
+					<p>Built and maintained backend features on a LAMP/WAMP stack with a ReactJS frontend for internal and client-facing systems.</p>
+					<p class="stack-line"># stack: WAMP/LAMP, ReactJS, Ghostscript</p>
 				</div>
 			</div>
-			<!-- Technologies -->
-			<div id="technologies-container" class="container">
-				<h4>Technologies</h4>
-				<div class="tech-logos">
-					<img src="assets/logos/go.svg" alt="Go">
-					<img src="assets/logos/docker.svg" alt="Docker">
-					<img src="assets/logos/kubernetes.svg" alt="Kubernetes">
-					<img src="assets/logos/apache-spark.svg" alt="Apache Spark">
-					<img src="assets/logos/hadoop.svg" alt="Hadoop">
-					<img src="assets/logos/mongodb.svg" alt="MongoDB">
-					<img src="assets/logos/postgresql.svg" alt="PostgreSQL">
-					<img src="assets/logos/python.svg" alt="Python">
-					<img src="assets/logos/flask.svg" alt="Flask">
-					<img src="assets/logos/scala.svg" alt="Scala">
-					<img src="assets/logos/bash.svg" alt="Bash">
-					<img src="assets/logos/c.svg" alt="C">
-					<img src="assets/logos/java.svg" alt="Java">
-					<img src="assets/logos/js.svg" alt="JavaScript">
-					<img src="assets/logos/html5.svg" alt="HTML5">
-					<img src="assets/logos/htmx.png" alt="HTMX">
-					<img src="assets/logos/css3.svg" alt="CSS3">
-				</div>
-			</div>
-
-			<!-- Profile -->
-			<div id="profile-container" class="container">
-				<!-- Picture -->
-				<div class="image-container">
-					<img src="https://picsum.photos/200" />	
-				</div>
-				<!-- Details -->
-				<div>
-					<!-- Name -->
-					<h3> Chalvatzis Kyriakos </h3>
-					<!-- Short-Info -->
-					<ul>	
-							<li>Technical University of Crete Graduate
-							</li>
-							<li>
-								Electrical & Computer Engineering
-							</li>
-							<li>
-								Software Engineer
-							</li>
-					</ul>
-			
-				</div>
-			</div>	
-		</div>
-
-		<hr>
-		<!-- Accomplishments -->
-		<div id="accomplishments-container" class="container">
-			
-		</div>
+		</section>
 
 		<!-- Education -->
+		<section id="education" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> cat education.log</p>
+			<div class="output log">
+				<div class="log-entry">
+					<p class="log-meta"><span class="ts">[2019-09 → 2025-12]</span> Technical University of Crete — Crete, Greece</p>
+					<p>Integrated MEng, Electrical &amp; Computer Engineering</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section id="skills" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> env | grep -i skill</p>
+			<div class="output env-vars">
+				<p><span class="var">SKILL_LANGUAGES</span>=<span class="val">"Go, Python, C, JavaScript, Java, SQL"</span></p>
+				<p><span class="var">SKILL_BACKEND</span>=<span class="val">"Gin, Django, Flask, FastAPI, REST, WebSockets, gRPC"</span></p>
+				<p><span class="var">SKILL_CLOUD</span>=<span class="val">"Kubernetes, Docker/Podman, AWS, GCP, Kafka, MinIO, Keycloak"</span></p>
+				<p><span class="var">SKILL_SYSTEMS</span>=<span class="val">"Linux (daily driver, 7+ yrs), Bash, self-hosted Ubuntu admin"</span></p>
+				<p><span class="var">SKILL_DATA</span>=<span class="val">"PostgreSQL, SQLite, DuckDB, Hadoop, Spark"</span></p>
+				<p><span class="var">SKILL_FRONTEND</span>=<span class="val">"HTML/CSS, JavaScript, React, HTMX"</span></p>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<footer id="contact" class="cmd-block">
+			<p class="prompt-line"><span class="prompt">$</span> ./contact.sh --help</p>
+			<div class="output">
+				<ul class="flag-list">
+					<li><i class="fa-solid fa-envelope"></i><span class="flag">--email</span> <a href="mailto:kyriakos.halvatzis@gmail.com">kyriakos.halvatzis@gmail.com</a></li>
+					<li><i class="fa-brands fa-github"></i><span class="flag">--github</span> <a href="https://github.com/kyri56xcaesar" target="_blank" rel="noopener">github.com/kyri56xcaesar</a></li>
+					<li><i class="fa-brands fa-linkedin"></i><span class="flag">--linkedin</span> <a href="https://linkedin.com/in/kchalvatzis" target="_blank" rel="noopener">linkedin.com/in/kchalvatzis</a></li>
+					<li><i class="fa-solid fa-location-dot"></i><span class="flag">--location</span> Athens/Chania, Greece</li>
+				</ul>
+			</div>
+			<p class="prompt-line end"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+		</footer>
+
 	</main>
 </body>
 </html>
